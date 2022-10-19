@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+}
+
+body
+{  
+    min-height: 100vh;
+    overflow: visible; /*esconde a barra*/
+    background-image: linear-gradient(0deg, #430086, #160124, #451e6d);
+}
+
+header
+{
+    position: absolute;
+    TOP: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    padding: 30px 100px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: top;   /* display flex esta deixando a letra no meio */
+    z-index: 10000;
+}
+
+header div a /* home btn */
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5.3vh;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: rgb(26, 237, 19);
+}
+
+
+
+.home
+{
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing  : 1.5px;
+}
+
+header .logo
+{
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing  : 1.5px;
+}
+
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+header ul li
+{
+    list-style: none; /*tira os pontinhos*/
+    margin-left: 20px; /*insere espaço de 20px entre as palavras*/
+    height: 50px;
+}
+
+header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 25px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0, 0.2);
+    z-index: 1;
+    font-weight: 400;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+header ul li a:hover,
+header ul li a.active
+{
+    letter-spacing: 4px;
+    background: rgb(31, 25, 34);
+    opacity: 0.5;
+    color:rgb(243, 9, 192)
+}
+
+header ul li a::before
+header ul li a.active 
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg translateY(200%));
+    transition: 0.5s;
+}
+
+
+
+section
+{
+    position: relative; /*margin*/
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+}
+section::before
+{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 5px;
+   background: linear-gradient(to bottom, #1c0522, #24052c);
+
+
+}
+
+section img
+{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;/*sobrepoe as imagens*/
+    pointer-events: none;
+
+      
+}
+
+section img#moon
+{
+    mix-blend-mode: screen;
+
+
+}
+
+section img#mountains_front
+{
+
+
+}
+
+
+
+
+#text
+{
+    
+    position: absolute;
+    color:rgb(197, 184, 207);  
+    white-space: nowrap;
+    font-size: 6.5vw;
+    margin-bottom: 20px;
+
+}
+#btn
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 30px;
+    background:#fff;
+    color: #2b1055;
+    font-size: 1.5em;
+
+    transform: translateY(100px);
+}
+.sec
+{
+    position: relative;
+    padding: 100px;
+    background: transparent;
+
+}
+.sec h2
+{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+
+}
+.sec h3
+{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+
+}
+.sec p
+{
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: rgb(245, 172, 242);
+
+}
+
+.sec :any-link
+{
+    font-size: 2em;
+    margin-bottom: 2px;
+    color: rgb(174, 38, 93);
+}
+
+
+.bg-conteiner{
+    background-size: flex;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #430086, #160124, #451e6d);
+    background-size: 500% 500%;
+    animation: bgAnimatedGradient 10s infinite linear;  
+    z-index: 1;
+}
+
+h1 {
+	text-align: top;
+	padding:3% 3%;
+	margin: 0%;
+	letter-spacing: 6px;
+	font-size: 4vw;
+	color: white;
+}
+
+@keyframes bgAnimatedGradient {
+    0% {
+        background-position: 0% 85%;
+    }
+
+    50% {
+        background-position: 100% 20%;
+    }
+
+    100% {
+        background-position: 0% 85%;
+    }
+}
+
+@keyframes btnAnimatedGradient {
+    0% {
+        color: rgb(0, 0, 0);
+    }
+    100% {
+        color: rgb(243, 9, 192);
+    }
+}

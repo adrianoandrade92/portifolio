@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-conteiner">
+        <header>
+            <div class="btn_home"><a href="index.html">HOME</a></div>
+            <ul>
+                <li><a href="education.html" class="logo">Education</a></li>
+                <li><a href="experience.html" class="logo">Experience</a></li>
+                <li><a href="projects.html" class="logo">Projects</a></li>
+                <li><a href="skills.html" class="logo">Skills</a></li>
+            </ul>
+        </header>
+        <section>
+            <img alt= "stars" src="./assets/stars.png" id = "stars">
+            <img alt= "moon" src="./assets/moon.png" id = "moon">
+            <img alt= "mountains_behind" src="./assets/mountains_behind.png" id = "mountains_behind">
+            <a href="#sec" id="btn">Click</a> <!--  "# + nome da classe", vai para a classe  -->
+            <img alt= "mountains_front" src="./assets/mountains_front.png" id = "mountains_front">
+            <h2 id="text">Contact Me</h2>
+        
+        </section>
+        <div class="sec" id="sec">
+            <h2>Contact</h2>
+            <h3>E-mail</h3>
+            <p id="email">
+                <a href = "mailto:adrianoandrade92@gmail.com?subject=Hello">adrianoandrade92@gmail.com</a>.
+            </p>
+            <p>
+                São José dos Campos - São Paulo - Brasil.<br><br>
+                ©Copyright<br><br>
+                Todos os direitos reservados.
+            </p>
+        </div>
+        <script>
+            let stars = document.getElementsById("stars");
+            let moon = document.getElementsById("moon");
+            let mountains_behind = document.getElementsById("mountains_behind");
+            let text = document.getElementsById("text");
+            let btn = document.getElementsById("btn");
+            let mountains_front = document.getElementsById("mountains_front");
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 0.25 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0.5 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+            })
+        </script>
+    </div>
+
+    
+</body>
+</html>
