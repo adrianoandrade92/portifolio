@@ -7,7 +7,7 @@
 
 My first portifolio is a portifolio project that includes my education, my experiences and my current projects in programming.
 
-[click ->](https://adrianoandrade92.github.io/portifolio/)
+[click here to see my portifolio](https://adrianoandrade92.github.io/portifolio/)
 
 ## Tecnologias 
 
